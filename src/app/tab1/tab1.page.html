@@ -1,41 +1,52 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab One
-    </ion-title>
+    <ion-item lines="none">
+      <img slot="start" src="./../../assets/imgs/logo.png" />
+      <h3 text-wrap class="ion-text-center">Πολιτική Προστασία Δήμου Χίου</h3>
+      <img slot="end" src="./../../assets/imgs/sfigga.png" />
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+  <ion-card class="welcome-card">
+    <img src="/assets/imgs/forest.jpg" alt="" />
+    <ion-card-header>
+      <ion-card-title>Εθελοντισμός</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Κάνε τη διαφορά. Γίνε εθελοντής</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>ΟΔΗΓΙΕΣ ΠΡΟΣΤΑΣΙΑΣ</ion-label>
+    </ion-list-header>
+    <ion-item href="https://www.chios.gov.gr/index.php?option=com_content&view=article&id=1882&Itemid=410#seismoi">
+      <ion-icon slot="start" src="assets/imgs/earthquake.svg"></ion-icon>
+      <ion-label>Σεισμοί</ion-label>
+    </ion-item>
+    <ion-item href="https://www.chios.gov.gr/index.php?option=com_content&view=article&id=1882&Itemid=410#pirkagies">
+      <ion-icon slot="start" src="assets/imgs/forest-fire.svg"></ion-icon>
+      <ion-label>Πυρκαγιές</ion-label>
+    </ion-item>
+    <ion-item href="https://www.chios.gov.gr/index.php?option=com_content&view=article&id=1882&Itemid=410#plimires">
+      <ion-icon slot="start" src="assets/imgs/flood.svg"></ion-icon>
+      <ion-label>Πλημμύρες</ion-label>
+    </ion-item>
+    <ion-item href="https://www.chios.gov.gr/index.php?option=com_content&view=article&id=1882&Itemid=410#entona">
+      <ion-icon slot="start" src="assets/imgs/thunderstorm.svg"></ion-icon>
+      <ion-label>Έντονα καιρικά φαινόμενα</ion-label>
+    </ion-item>
+    <ion-item href="http://civilprotection.gr/sites/default/gscp_uploads/media/teliko_esoteriko_2016_greece.pdf">
+      <ion-icon slot="start" src="assets/imgs/protection.svg"></ion-icon>
+      <ion-label>Οδηγίες Αυτοπροστασίας</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="tryMe()">Default</ion-button>
+  <small class="ion-padding">Icons made by <a href="https://www.flaticon.com/authors/fjstudio"
+      title="fjstudio">fjstudio</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is
+    licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC
+      3.0 BY</a>
+  </small>
 </ion-content>
