@@ -1,9 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
+    <ion-item lines="none">
+      <img slot="start" src="assets/imgs/logo.png" />
+      <h3 class="ion-text-center ion-text-wrap ">Πολιτική Προστασία Δήμου Χίου</h3>
+      <img slot="end" src="assets/imgs/sfigga.png" />
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content padding>
+  <h2 class="ion-text-center">Ανακοινώσεις</h2>
+  <ion-list>
+    <ion-item *ngFor="let item of news" href="{{item.link}}" detail="true">
+      <ion-label>
+        <h3 class="ion-text-wrap">{{item.title}}</h3>
+        <small>{{item.pubDate}}</small>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

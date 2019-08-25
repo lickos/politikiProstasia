@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { HTTP } from '@ionic-native/http/ngx';
 
 
 @Injectable({
@@ -8,10 +9,9 @@ import { Observable } from 'rxjs';
 })
 export class GetDataService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HTTP) { }
 
-  getRemoteData(url: string): Observable<any> {
-    console.log("getData")
-    return this.http.get(url)
+  getRemoteData(url: string) {
+    return this.http.get(url, {}, {})
   }
 }

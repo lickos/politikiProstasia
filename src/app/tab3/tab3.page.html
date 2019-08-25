@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
+    <ion-item lines="none">
+      <img slot="start" src="assets/imgs/logo.png" />
+      <h3 class="ion-text-center ion-text-wrap ">Πολιτική Προστασία Δήμου Χίου</h3>
+      <img slot="end" src="assets/imgs/sfigga.png" />
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content padding>
+  <h2 class="ion-text-center">{{weather.title}}</h2>
+  <small>Published: {{weather.pubDate}}</small>
+  <div id="weatherDescription">
+  </div>
+</ion-content>

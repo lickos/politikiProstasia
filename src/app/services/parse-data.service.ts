@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as xml2js from 'xml2js';
+import { NgxXml2jsonService } from 'ngx-xml2json';
 import { GetDataService } from './get-data.service'
 
 @Injectable({
@@ -7,18 +7,14 @@ import { GetDataService } from './get-data.service'
 })
 export class ParseDataService {
 
-  constructor(private getData: GetDataService) { }
+  constructor(private getData: GetDataService, private ngxXml2jsonService: NgxXml2jsonService) { }
 
-  parseData() {
-    console.log("Parse Data")
-    let parser = new xml2js.Parser();
-    this.getData.getRemoteData('https://www.civilprotection.gr/el/rss.xml').subscribe(data => {
-      xml2js.readFile(data, function (err, data) {
-        parser.parseString(data, function (err, result) {
-          console.dir(result);
-          console.log('Done');
-        })
-      })
+  parseData(url: string) {
+    const parser = new DOMParser();
+    this.getData.getRemoteData(url).then(data => {
+      let xml = parser.parseFromString(data.data, 'text/xml')
+      const obj = this.ngxXml2jsonService.xmlToJson(xml);
+      return obj;
     })
   }
 

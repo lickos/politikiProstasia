@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item lines="none">
+      <img slot="start" src="assets/imgs/logo.png" />
+      <h3 text-wrap class="ion-text-center">Πολιτική Προστασία Δήμου Χίου</h3>
+      <img slot="end" src="assets/imgs/sfigga.png" />
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2 class="ion-text-center">5 day / 3 hour forecast for Chios</h2>
+  <ion-list>
+    <ion-item *ngFor="let item of weatherForecast">
+      <ion-label text-wrap>
+        <ion-text color="primary">
+          <p>{{item?.dt_txt | date:'dd MMM yyyy - H:mm:ss'}}</p>
+        </ion-text>
+        <ion-text color="secondary">
+          <p>Temp: {{item.main.temp}} - Min. Temp: {{item.main.temp_min}} - Max. Temp:
+            {{item.main.temp_max}}</p>
+        </ion-text>
+        <ion-text color="primary">
+          <p>Pressure: {{item.main.pressure}}</p>
+        </ion-text>
+        <ion-text color="secondary">
+          <p>Wind Speed: {{item.wind.speed}} - Wind Deg: {{item.wind.deg}}</p>
+        </ion-text>
+        <ion-text color="primary">
+          <p>Wether description: {{item.weather[0].description | titlecase}}</p>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+    <ion-icon src="{{'http://openweathermap.org/img/wn/' + item?.weather[0].icon + '@2x.png'}}"></ion-icon>
+  </ion-list>
+</ion-content>

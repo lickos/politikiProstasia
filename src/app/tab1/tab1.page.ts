@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ParseDataService } from './../services/parse-data.service'
+import { ParseDataService } from './../services/parse-data.service';
+import { GetDataService } from './../services/get-data.service'
 
 @Component({
   selector: 'app-tab1',
@@ -8,10 +9,5 @@ import { ParseDataService } from './../services/parse-data.service'
 })
 export class Tab1Page {
 
-  constructor(private parseData: ParseDataService) { }
-
-  tryMe() {
-    this.parseData.parseData();
-  }
-
+  constructor(private parseData: ParseDataService, private getData: GetDataService) { }
 }

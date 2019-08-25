@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item lines="none">
+      <img slot="start" src="assets/imgs/logo.png" />
+      <h3 class="ion-text-center ion-text-wrap ">Πολιτική Προστασία Δήμου Χίου</h3>
+      <img slot="end" src="assets/imgs/sfigga.png" />
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <h2>
+    {{map.title}}
+  </h2>
+  <small>{{map.pubDate}}</small>
+  <div>
+    <img *ngIf="imgSrc" src="{{imgSrc}}" />
+    <img *ngIf="!imgSrc" src="{{imgSrc1}}" />
+  </div>
+</ion-content>
